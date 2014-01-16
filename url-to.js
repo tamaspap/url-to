@@ -24,13 +24,13 @@
 
 
     /**
-     * Fetch an absolute site URL based on a URI segment
+     * Fetch an absolute page URL based on a URI segment
      *
      * @param   {string}    uri
      * @param   {object}    replacePairs
      * @returns {string}
      */
-    URLTo.site = function(uri, replacePairs) {
+    URLTo.page = function(uri, replacePairs) {
 
         var url = URLTo.base() + "/" + uri;
         return replace(url, replacePairs);
@@ -60,7 +60,7 @@
     URLTo.apiBase = function(url) {
 
         (url !== undefined) && (apiBaseURL = url);
-        return apiBaseURL || URLTo.site("api");
+        return apiBaseURL || URLTo.page("api");
     };
 
 

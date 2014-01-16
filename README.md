@@ -13,9 +13,9 @@ The base url is detected automatically. However, if you want to use a custom bas
     
 **2. Create absolute url to a page**
 
-    URLTo.site("about"); -> http://www.example.com/about
-    URLTo.site("$1/$2", ["josh", "profile"]) -> http://www.example.com/josh/profile
-    URLTo.site("products/:product_id/show", {":product_id": 1234}) -> http://www.example.com/products/1234/show
+    URLTo.page("about"); -> http://www.example.com/about
+    URLTo.page("$1/$2", ["josh", "profile"]) -> http://www.example.com/josh/profile
+    URLTo.page("products/:product_id/show", {":product_id": 1234}) -> http://www.example.com/products/1234/show
 
     
 **3. Create absolute url to an API endpoint**
