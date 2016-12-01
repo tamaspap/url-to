@@ -28,6 +28,11 @@ The base url is detected automatically. However, if you want to use a custom bas
 
     URLTo.apiBase(); -> http://www.example.com/api
     URLTo.apiBase(http://www.another.com/api);
+
+**5. Build a url**
+
+    URLTo.build("http://www.example.com", "$1/$2", ["josh", "profile"]) -> http://www.example.com/josh/profile
+    URLTo.build(http://www.example.com, "products/:product_id/show", {":product_id": 1234}) -> http://www.example.com/products/1234/show    
     
     
     

@@ -3,7 +3,6 @@
     var baseURL;
     var apiBaseURL;
 
-
     /**
      * Set/Get the base URL
      *
@@ -11,7 +10,6 @@
      * @returns {string}
      */
     URLTo.base = function(url) {
-
         (url !== undefined) && (baseURL = url);
 
         // If no base url set, try to get it automatically
@@ -30,10 +28,8 @@
      * @param   {object}    replacePairs
      * @returns {string}
      */
-    URLTo.page = function(uri, replacePairs) {
-
-        var url = URLTo.base() + "/" + uri;
-        return replace(url, replacePairs);
+    URLTo.page = function(uri, replacePairs) {        
+        return URLTo.build(URLTo.base(), uri, replacePairs);
     };
 
 
@@ -45,9 +41,7 @@
      * @returns {string}
      */
     URLTo.api = function(uri, replacePairs) {
-
-        var url = URLTo.apiBase() + "/" + uri;
-        return replace(url, replacePairs);
+        return URLTo.build(URLTo.apiBase(), uri, replacePairs);
     };
 
 
@@ -58,10 +52,23 @@
      * @returns {string}
      */
     URLTo.apiBase = function(url) {
-
         (url !== undefined) && (apiBaseURL = url);
         return apiBaseURL || URLTo.page("api");
     };
+
+
+    /**
+     * Build a url.
+     *
+     * @param   {string}    baseUrl
+     * @param   {string}    uri
+     * @param   {object}    replacePairs
+     * @returns {string}
+     */
+    URLTo.build = function(baseUrl, uri, replacePairs) {
+        var url = baseUrl + "/" + uri;
+        return replace(url, replacePairs);
+    }
 
 
     /**
@@ -91,7 +98,6 @@
 
         return str;
     }
-
 
     window.URLTo = URLTo;
 
