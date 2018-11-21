@@ -1,6 +1,24 @@
 {
+  "name": "url-to",
+  "version": "0.1.3",
+  "description": "Helper for creating URLs.",
+  "main": "url-to.js",
+  "dependencies": {},
   "devDependencies": {
-	  "grunt": "~0.4.1",   
-	  "grunt-contrib-uglify":   "~0.2.7"
-  }
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.7"
+  },
+  "scripts": {
+    "build": "grun build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamaspap/url-to.git"
+  },
+  "author": "Tamas Pap <tamas@tamaspap.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tamaspap/url-to/issues"
+  },
+  "homepage": "https://github.com/tamaspap/url-to#readme"
 }
